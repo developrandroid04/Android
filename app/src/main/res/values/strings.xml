@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">तारण पंथ</string>
+    <string name="app_name_with_index">Page (%1$d/%2$d)</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+</resources>

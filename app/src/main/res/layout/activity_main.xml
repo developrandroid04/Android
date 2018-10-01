@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/toolbar"
+
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/layout_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/large_margin"
+        android:background="@drawable/white_round_corner_with_stroke"
+        android:elevation="@dimen/small_margin"
+        android:paddingLeft="@dimen/extra_large_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="तारण स्वामी का परिचय"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/extra_large_margin"
+            android:src="@drawable/ic_chevron_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_granth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_intro"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginRight="@dimen/large_margin"
+        android:background="@drawable/white_round_corner_with_stroke"
+        android:elevation="@dimen/small_margin"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/extra_large_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="तारण स्वामी के ग्रन्थ"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/extra_large_margin"
+            android:src="@drawable/ic_chevron_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_granth"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginRight="@dimen/large_margin"
+        android:layout_marginTop="@dimen/large_margin"
+
+        android:background="@drawable/white_round_corner_with_stroke"
+        android:elevation="@dimen/small_margin"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/extra_large_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="तारण देशना - विडियो"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/extra_large_margin"
+            android:src="@drawable/ic_chevron_right" />
+    </RelativeLayout>
+</LinearLayout>
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+          android:orientation="vertical"
+        />
+
+</RelativeLayout>

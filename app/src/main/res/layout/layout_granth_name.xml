@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_granth"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:layout_marginLeft="@dimen/large_margin"
+        android:layout_marginRight="@dimen/large_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:background="@drawable/white_round_corner_with_stroke"
+        android:elevation="@dimen/small_margin"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/extra_large_margin">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="तारण स्वामी के ग्रन्थ"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/extra_large_margin"
+            android:src="@drawable/ic_chevron_right" />
+    </RelativeLayout>
+
+</LinearLayout>
