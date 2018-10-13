@@ -37,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
                 showIntroFragment(new VideoFragment(), VideoFragment.TAG);
             }
         });
+        findViewById(R.id.layout_granth).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((TextView) mToolbar.findViewById(R.id.toolbar_title)).setText("तारण स्वामी के ग्रन्थ");
+                showIntroFragment(new GranthFragment(), GranthFragment.TAG);
+            }
+        });
     }
 
     public void showIntroFragment(Fragment fragment, String headerText) {

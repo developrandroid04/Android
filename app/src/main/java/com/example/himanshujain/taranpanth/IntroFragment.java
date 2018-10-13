@@ -41,7 +41,7 @@ public class IntroFragment extends Fragment {
         mRootView = inflater.inflate(R.layout.fragment_intro, container, false);
         mActivity = getActivity();
         webView = (WebView) mRootView.findViewById(R.id.webView);
-        startWebView("https://en.wikipedia.org/wiki/Taran_Panth");
+        startWebView("https://www.wikiwand.com/hi/%E0%A4%A4%E0%A4%BE%E0%A4%B0%E0%A4%A3%E0%A4%AA%E0%A4%82%E0%A4%A5");
         return mRootView;
     }
 
@@ -58,7 +58,7 @@ public class IntroFragment extends Fragment {
         final AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
 
         progressBar = ProgressDialog.show(getActivity(), "", "Loading...");
-
+        progressBar.setCanceledOnTouchOutside(true);
         webView.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 Log.i(TAG, "Processing webview url click...");

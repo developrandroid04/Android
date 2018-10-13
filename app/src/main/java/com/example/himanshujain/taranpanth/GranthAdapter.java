@@ -1,6 +1,5 @@
 package com.example.himanshujain.taranpanth;
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,19 +14,17 @@ public class GranthAdapter extends RecyclerView.Adapter<GranthAdapter.ViewHolder
 
     private LayoutInflater inflater;
     private Context mContext;
-    private colorListener mListener;
-    Activity activity;
-    Boolean isSearch;
+    private GranthListener mListener;
+     Boolean isSearch;
     List<String> data;
 
 
-    public GranthAdapter(Context context, Activity activity, List<String> data, LayoutInflater inflater, colorListener colorListener) {
+    public GranthAdapter(Context context, List<String> data, LayoutInflater inflater, GranthListener colorListener) {
         this.mContext = context;
         this.inflater = inflater;
         this.data = data;
         mListener = colorListener;
-        this.activity = activity;
-        this.isSearch = isSearch;
+         this.isSearch = isSearch;
     }
 
 
@@ -51,7 +48,7 @@ public class GranthAdapter extends RecyclerView.Adapter<GranthAdapter.ViewHolder
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+mListener.onGranthClick(data.get(position));
             }
         });
 
@@ -77,7 +74,8 @@ public class GranthAdapter extends RecyclerView.Adapter<GranthAdapter.ViewHolder
         }
     }
 
-    public interface colorListener {
+    public interface GranthListener {
+        public void onGranthClick(String name);
     }
 
 
